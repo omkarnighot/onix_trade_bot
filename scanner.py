@@ -7,6 +7,7 @@ import numpy as np
 from datetime import datetime, timedelta
 import io
 import requests
+import os
 
 # ---- Config ----
 NEAR_PCT = 1.0        # "near MA" threshold in % (change to 0.5 if you want tighter)
@@ -25,8 +26,8 @@ NIFTY50 = [
 ]
 
 # ---- Telegram Config ----
-TELEGRAM_BOT_TOKEN = "YOUR_BOT_TOKEN"  # replace with your bot token
-TELEGRAM_CHAT_ID = "YOUR_CHAT_ID"      # replace with your chat ID
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")  # replace with your bot token
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID")      # replace with your chat ID
 
 # ---- Helper Functions ----
 def safe_download(sym, interval_used):
