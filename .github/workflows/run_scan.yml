@@ -3,7 +3,7 @@ name: Run 44MA Scanner
 on:
   schedule:
     # Runs every weekday at 9:15 AM IST (3:45 UTC)
-    - cron: '45 3 * * 1-5'
+    - cron: '30 2 * * 1-5'
   workflow_dispatch:   # Allows manual trigger
 
 jobs:
